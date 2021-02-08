@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  width: 430px;
+  height: 600px;
+  background-color: rgb(255, 255, 255);
+  /* margin: auto; */
+  font-size: 0;
+  position: relative;
+  border: 5px solid white;
+  box-shadow: 0px 0px 15px rgb(145, 145, 145);
+  /* transform-style: preserve-3d; */
+}
+
+.top {
+  background-color: #4a90e2;
+  width: 100%;
+  height: 130px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+}
+
+.footer {
+  width: 100%;
+  height: 47px;
+  background-color: white;
+  position: relative;
+  bottom: 0;
+  border-top: 1px solid rgb(202, 202, 202);
+  font-size: 12px;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  margin: 3px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.5s;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  background-image: url(./mycards/card_back.jpg);
+  position: absolute;
+  transform: rotateY(180deg);
+}
+
+.front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: contain;
+}
+
+.close {
+  transform: rotateY(180deg);
+}
+
+.text {
+  width: 100%;
+  color: white;
+  font-size: 10px;
+  padding: 30px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.text h1 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#btn-start {
+  background: #4a90e2;
+  color: white;
+  height: 38px;
+  border-radius: 2px;
+  border: 0;
+  padding: 0px 18px;
+  font-weight: 300;
+  font-size: 13px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#btn-start:hover {
+  filter: brightness(92%);
+}
+
+.footer-p {
+  width: calc(100% - 100px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  color: #4a90e2;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.footer img {
+  width: 38px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  cursor: pointer;
+}
+
+.footer img:hover {
+  filter: brightness(50%);
+}
+
+.grayscale {
+  filter: grayscale(100%);
+  cursor: not-allowed !important;
+}
+
+.disabled-cursor {
+  pointer-events: none;
+  cursor: not-allowed;
+}
